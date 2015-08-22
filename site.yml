@@ -1,0 +1,10 @@
+---
+# Defines deployment design and assigns role to server groups
+
+- hosts: dbs
+  vars:
+    - galera_cluster_members: [192.168.110.10, 192.168.110.11]
+  roles:
+  - galera-common
+  - galera
+
